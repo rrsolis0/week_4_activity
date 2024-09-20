@@ -4,74 +4,140 @@
 ##########################Reviewing somethings
 
 # indexing strings -- slide 4
-my_text = 'this is a text '
-result = my_text  #get the index of the letter a
-print(result[0:4]) #prints the first 4 letters of the text
-print(result[-1]) #prints the last letter of the text 
-# this is called indexing
-# index slicing is a wya to get a substring froma string
-# substrings are a sequence of charcters froma string
-# prints the last letter of the text
-print(result[-1])
+# my_text = 'this is a text '
+# result = my_text  #get the index of the letter a
+# print(result[0:4]) #prints the first 4 letters of the text
+# print(result[-1]) #prints the last letter of the text 
+# # this is called indexing
+# # index slicing is a wya to get a substring froma string
+# # substrings are a sequence of charcters froma string
+# # prints the last letter of the text
+# print(result[-1])
 
-#get the index of the third letter from the end of the text
-print(result[-3])
-# find the index of the letter s
-print(result.find('s'))
-print(result.find('text'))
+# #get the index of the third letter from the end of the text
+# print(result[-3])
+# # find the index of the letter s
+# print(result.find('s'))
+# print(result.find('text'))
 
-prepRally = "Hancock College Prep cheerleaders are the best! "
-# get the index of the word "cheerleaders" in the string prepRally
-print(prepRally.find('cheerleaders'))
-print(prepRally[21:32])
-# print(result.find("cheerleaders")) - prints -1 bc cheerleaders is not a thing
+# prepRally = "Hancock College Prep cheerleaders are the best! "
+# # get the index of the word "cheerleaders" in the string prepRally
+# print(prepRally.find('cheerleaders'))
+# print(prepRally[21:32])
+# # print(result.find("cheerleaders")) - prints -1 bc cheerleaders is not a thing
 
-###slide 5
-# string[start:stop:step]
-#example
-text = "Hello, World!"
-print(text[0:12:3])  # prints "World"
-text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-# Get the substring CDE and put in a variable
-print(text.find('C'))
-print(text.find('D'))
-print(text.find('E'))
-print(text[2:5])
-
-#get the first letter all the way to the 4th letter
-print(text[0:4])
-#get the first letter to the final letter and skip every 3rd letter
-print(text[0:-1:3])
-
-# Built-in methods:
-# Python has a variety of built-in methods to work with substrings.
-
-# a. str.find():
-# This method returns the lowest index of the substring if found in the given string. If it's not found, it returns -1.
+# ###slide 5
+# # string[start:stop:step]
+# #example
 # text = "Hello, World!"
-# print(text.find("World"))  # prints 7
-# print(text.find("Earth"))  # prints -1
+# print(text[0:12:3])  # prints "World"
+# text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# # Get the substring CDE and put in a variable
+# print(text.find('C'))
+# print(text.find('D'))
+# print(text.find('E'))
+# print(text[2:5])
 
-#################################Extracting Sub-Strings###################################
-# Extracting Sub-Strings Practice #1
-# Extract the first word of the following sentence using slicing, and display it on the screen:
-sentence = "Controlling complexity is the essence of programming"
-print(sentence[0:11])
-# Hint: "Controlling" is 11 characters long.
+# #get the first letter all the way to the 4th letter
+# print(text[0:4])
+# #get the first letter to the final letter and skip every 3rd letter
+# print(text[0:-1:3])
 
-# Extracting Sub-Strings Practice #2
-# Take every third character starting from the ninth to the end of the sentence, and print the result.
-sentence1 = "Never trust a computer you can't throw out a window"
-print(sentence1[9:-1:3])
+# # Built-in methods:
+# # Python has a variety of built-in methods to work with substrings.
 
-# Extracting Sub-Strings Practice #3
-# Reverses the position of all the characters in the following sentence and displays the result on the screen.
-wrd = "It's great to work with computers. They don't argue, they remember everything and they don't drink your beer"
-print(wrd[::-1])
+# # a. str.find():
+# # This method returns the lowest index of the substring if found in the given string. If it's not found, it returns -1.
+# # text = "Hello, World!"
+# # print(text.find("World"))  # prints 7
+# # print(text.find("Earth"))  # prints -1
+
+# #################################Extracting Sub-Strings###################################
+# # Extracting Sub-Strings Practice #1
+# # Extract the first word of the following sentence using slicing, and display it on the screen:
+# sentence = "Controlling complexity is the essence of programming"
+# print(sentence[0:11])
+# # Hint: "Controlling" is 11 characters long.
+
+# # Extracting Sub-Strings Practice #2
+# # Take every third character starting from the ninth to the end of the sentence, and print the result.
+# sentence1 = "Never trust a computer you can't throw out a window"
+# print(sentence1[9:-1:3])
+
+# # Extracting Sub-Strings Practice #3
+# # Reverses the position of all the characters in the following sentence and displays the result on the screen.
+# wrd = "It's great to work with computers. They don't argue, they remember everything and they don't drink your beer"
+# print(wrd[::-1])
 
 ##################################### String Methods#################################
+# uppercase method in python
+snetnece = "Especially in electronic communications, writting in all caps is equivalent to yelling."
+print(snetnece.upper()) #print the sentence in upper case
+# lowercase method in python
+sentence2 = "ESPN IS THE BEST SPORTS NETWORK"
+print(sentence2.lower()) # prints the sentece is lowercase
+print(snetnece.find("communications")) # prints the index of the word communcation
+# uppercase the word "communcation" in the sentence
+# string slicing method
+print(snetnece[25:39].upper())
+print(snetnece.replace("communications", " COMMUNICATIONS")) #prints the sentece communications in uppercase
+# or can use the uppermethod
+print(snetnece.replace("communcations", "communications".upper())) # prints the sentence word communications in upper case
+
+new_sentence = "if the implementation is hard to explain, it might be a bad idea."
+mod_sentence = new_sentence.replace("hard", "easy").replace("bad", "good")
+print(mod_sentence)
+
+# join method 
+word_list = ["Simple","is", "better", "than", "complex"]
+print(word_list)
+joined_sentence = " ".join(word_list)
+print(joined_sentence)
+new_word_list = {"apple", "banana","mango", "cherry", 'watermelon'}
+joined_new_word = " 😊".join(new_word_list)
+print(joined_new_word)
+
+# split method
+sentence4 = "I am a python programmer"
+print(sentence4.split()) #splits the sentece into a list of words
+# this prints out as ['I', 'am', 'a', 'python', 'programmer']
+# by defult, this method splits the sentence by commas
+print(sentence4.split(",")) #splits the sence into a list of words using a seperator
+# this pritns out as ['I am a python programmer']
+print(sentence4.split("a")) #splits the sentence iinto a list of words using a sepertor 
+
+# concatenation words in python repition 15 times
+result = "Repetiton " * 15
+print(result)
+
+# find the first paragraph in the declatrion of indepence 
+# place it in a variable called first_paragraph
+# replace the word "people" with "citizens" in the first paragraph
+# print the first paragraph with the word epople replaced with citizen
+# remove all the spaces, replace the commas with emojis
+first_paragraph = "We hold these truths to be self-evident, that all men are created equal, that they are endowed, by their Creator, with certain unalienable rights, that among these are life, liberty, and the pursuit of happiness.--That to secure these rights, governments are instituted among men, deriving their just powers from the consent of the governed, that whenever any form of government becomes destructive of these ends, it is the right of the people to alter or to abolish it, and to institute new government, laying its foundation on such principles, and organizing its powers in such form, as to them shall seem most likely to effect their safety and happiness. Prudence, indeed, will dictate, that governments long established, should not be changed for light and transient causes; and accordingly all experience hath shown, that mankind are more disposed to suffer, while evils are sufferable, than to right themselves by abolishing the forms to which they are accustomed. But when a long train of abuses and usurpations, pursuing invariably the same object, evinces a design to reduce them under absolute despotism, it is their right, it is their duty, to throw off such government, and to provide new guards for their future security. Such has been the patient sufferance of these Colonies; and such is now the necessity which constrains them to alter their former systems of government. The history of the present King of Great Britain is a history of repeated injuries and usurpations, all having in direct object the establishment of an absolute tyranny over these States. To prove this, let facts be submitted to a candid world."
+mod_paragraph = first_paragraph.replace("people", "citizens").replace(",", "😊").replace(" ","")
+print(mod_paragraph)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # String Methods Practice #1
-#slieds 12 -16
+#slides 12 -16
 # Print the following text in uppercase, using the specific string method:
 # "Especially in electronic communications, writing in all caps is equivalent to yelling."
 # sentence = "Especially in electronic communications, writing in all caps is equivalent to yelling."
